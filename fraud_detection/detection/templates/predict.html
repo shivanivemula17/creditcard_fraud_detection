@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>credit crad fraud detection</title>
+</head>
+<body>
+    <h2>Enter Transaction Details</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="V1">V1:</label>
+        <input type="text" name="V1" required><br>
+
+        <label for="V2">V2:</label>
+        <input type="text" name="V2" required><br>
+
+        <label for="V2">V3:</label>
+        <input type="text" name="V3" required><br>
+
+        <label for="V2">V4:</label>
+        <input type="text" name="V4" required><br>
+ 
+        <label for="V2">V5:</label>
+        <input type="text" name="V5" required><br>
+        <label for="V2">V6:</label>
+        <input type="text" name="V6" required><br>
+        <label for="V2">V7:</label>
+        <input type="text" name="V7" required><br>
+        <label for="V2">V8:</label>
+        <input type="text" name="V8" required><br>
+        <label for="V2">V9:</label>
+        <input type="text" name="V9" required><br>
+        <label for="V2">V10:</label>
+        <input type="text" name="V10" required><br>
+        <label for="V2">V11:</label>
+        <input type="text" name="V11" required><br>
+        <label for="V2">V12:</label>
+        <input type="text" name="V12" required><br>
+        <label for="V2">V13:</label>
+        <input type="text" name="V13" required><br>
+        <label for="V2">V14:</label>
+        <input type="text" name="V14" required><br>
+        <label for="V2">V15:</label>
+        <input type="text" name="V15" required><br>
+        <label for="V2">V16:</label>
+        <input type="text" name="V16" required><br>
+        <label for="V2">V17:</label>
+        <input type="text" name="V17" required><br>
+        <label for="V2">V18:</label>
+        <input type="text" name="V18" required><br>
+        <label for="V2">V19:</label>
+        <input type="text" name="V19" required><br>
+        <label for="V2">V20:</label>
+        <input type="text" name="V20" required><br>
+        <label for="V2">V21:</label>
+        <input type="text" name="V21" required><br>
+        <label for="V2">V22:</label>
+        <input type="text" name="V22" required><br>
+        <label for="V2">V23:</label>
+        <input type="text" name="V23" required><br>
+        <label for="V2">V24:</label>
+        <input type="text" name="V24" required><br>
+        <label for="V2">V25:</label>
+        <input type="text" name="V25" required><br>
+        <label for="V2">V26:</label>
+        <input type="text" name="V26" required><br>
+        <label for="V2">V27:</label>
+        <input type="text" name="V27" required><br>
+        <label for="V2">V28:</label>
+        <input type="text" name="V28" required><br>
+        <label for="V2">V29:</label>
+        <input type="text" name="V29" required><br>
+        
+        <label for="Amount">Amount:</label>
+        <input type="text" name="Amount" required><br>
+
+        <button type="submit">Check Fraud</button>
+    </form>
+    {% if prediction %}
+        <h3>Prediction: {{ prediction }}</h3>
+    {% endif %}
+
+
+
+
+
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f9fc;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        label {
+            font-size: 16px;
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        input[type="text"] {
+            padding: 12px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #f7f9fc;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #007bff;
+            background-color: #fff;
+        }
+
+        button {
+            grid-column: span 2;
+            padding: 15px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .prediction {
+            margin-top: 30px;
+            text-align: center;
+            padding: 20px;
+            background-color: #e9f7fd;
+            border: 1px solid #007bff;
+            border-radius: 8px;
+            color: #007bff;
+            font-size: 18px;
+        }
+
+        /* For small screens */
+        @media (max-width: 768px) {
+            form {
+                grid-template-columns: 1fr;
+            }
+
+            button {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</body>
+</html>
